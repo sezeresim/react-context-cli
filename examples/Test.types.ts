@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import FetchStatusType from "@/types/FetchStatusType";
+import FetchStatusType from '@/types/FetchStatusType';
 
-import { ActionTypes } from "./ShipmentFirms.enums";
+import { ActionTypes } from './Test.enums';
 
 export type ModalType =
 
@@ -19,7 +19,7 @@ export type ReducerActionType =
   | {
       type: ActionTypes.EXAMPLE;
       payload: {
-        example: StateType["example"];
+        example: StateType['example'];
       };
     }
   

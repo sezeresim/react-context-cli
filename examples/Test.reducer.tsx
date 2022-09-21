@@ -1,5 +1,5 @@
-import { ActionTypes } from "./ShipmentFirms.enums";
-import type { ReducerActionType, StateType } from "./ShipmentFirms.types";
+import { ActionTypes } from './Test.enums';
+import type { ReducerActionType, StateType } from './Test.types';
 
 export const initialState: StateType = {
   example:any,
@@ -21,3 +21,4 @@ export default function seachReducer(
       return state;
   }
 }
+
