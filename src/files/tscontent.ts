@@ -90,7 +90,6 @@ export const TYPES_FILE: string = `import React from 'react';
 
 import { ActionTypes } from './RCACLI.enums';
 
-export type ModalType =
 
 export interface StateType {
   example:any
