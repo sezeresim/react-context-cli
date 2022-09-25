@@ -1,6 +1,6 @@
 {
     "name": "rca-cli",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "cli tool for create react context",
     "homepage": "https://github.com/sezeresim/react-context-cli",
     "author": {
@@ -25,8 +25,8 @@
     },
     "scripts": {
         "start": "tsc && node ./dist/index.js",
-        "build": "tsc",
-        "publish": "tsc && npm publish"
+        "build": "rm -rf dist && tsc",
+        "publish": "yarn build && npm publish"
     },
     "dependencies": {
         "inquirer": "^8.2.0",
