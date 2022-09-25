@@ -1,45 +1,42 @@
 {
-  "name": "rca-cli",
-  "version": "0.0.4",
-  "description": "cli tool for create react context",
-  "homepage": "https://github.com/sezeresim/react-context-cli",
-  "author": {
-    "email": "sezeresim@gmail.com",
-    "name": "Sezer Esim"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sezeresim/react-context-cli"
-  },
-  "keywords": [
-    "react",
-    "context",
-    "store",
-    "api",
-    "js",
-    "ts"
-  ],
-  "main": "./dist/index.js",
-  "bin": {
-    "create": "./dist/index.js"
-  },
-  "scripts": {
-    "start": "tsc && node ./dist/index.js",
-    "build": "tsc",
-    "publish": "tsc && npm publish"
-  },
-  "dependencies": {
-    "chalk": "^4.1.2",
-    "chalk-animation": "^1.6.0",
-    "inquirer": "^8.2.0",
-    "shelljs": "^0.8.5"
-  },
-  "devDependencies": {
-    "@types/chalk-animation": "^1.6.1",
-    "@types/inquirer": "^9.0.1",
-    "@types/shelljs": "^0.8.11",
-    "eslint": "^8.23.1",
-    "prettier": "^2.7.1",
-    "typescript": "^4.8.3"
-  }
+    "name": "rca-cli",
+    "version": "0.0.5",
+    "description": "cli tool for create react context",
+    "homepage": "https://github.com/sezeresim/react-context-cli",
+    "author": {
+        "email": "sezeresim@gmail.com",
+        "name": "Sezer Esim"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sezeresim/react-context-cli"
+    },
+    "keywords": [
+        "react",
+        "context",
+        "store",
+        "api",
+        "js",
+        "ts"
+    ],
+    "main": "./dist/index.js",
+    "bin": {
+        "create": "./dist/index.js"
+    },
+    "scripts": {
+        "start": "tsc && node ./dist/index.js",
+        "build": "tsc",
+        "publish": "tsc && npm publish"
+    },
+    "dependencies": {
+        "inquirer": "^8.2.0",
+        "shelljs": "^0.8.5"
+    },
+    "devDependencies": {
+        "@types/inquirer": "^9.0.1",
+        "@types/shelljs": "^0.8.11",
+        "eslint": "^8.23.1",
+        "prettier": "^2.7.1",
+        "typescript": "^4.8.3"
+    }
 }

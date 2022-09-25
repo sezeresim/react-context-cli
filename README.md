@@ -1,4 +1,4 @@
-# rca-cli
+# rca-cli
 
 rca-cli is a cli tool for creating context api
 
@@ -6,5 +6,5 @@ rca-cli is a cli tool for creating context api
 npx rca-cli create
 ```
 
-- [x] ts
-- [] js (as soon as)
+-   [x] ts
+-   [x] js
