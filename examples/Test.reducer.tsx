@@ -1,5 +1,5 @@
-import { ActionTypes } from './Test.enums';
-import type { ReducerActionType, StateType } from './Test.types';
+import { ActionTypes } from './test.enums';
+import type { ReducerActionType, StateType } from './test.types';
 
 export const initialState: StateType = {
   example:any,

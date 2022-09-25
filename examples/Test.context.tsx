@@ -5,16 +5,16 @@ import React, {
   useReducer,
 } from 'react';
 
-import { ActionTypes } from './Test.enums';
-import seachReducer, { initialState } from './Test.reducer';
-import { ContextType } from './Test.types';
+import { ActionTypes } from './test.enums';
+import seachReducer, { initialState } from './test.reducer';
+import { ContextType } from './test.types';
 
-const Test = createContext<ContextType>({
+const test = createContext<ContextType>({
   state: initialState,
   dispatch: () => {},
 });
 
-export function TestProvider({
+export function testProvider({
   children,
 }: {
   children: React.ReactNode;
@@ -29,27 +29,27 @@ export function TestProvider({
   };
 
   return (
-    <Test.Provider value={value}>{children}</Test.Provider>
+    <test.Provider value={value}>{children}</test.Provider>
   );
 }
 
-export function withTest(Component: ComponentType) {
+export function withtest(Component: ComponentType) {
   return function LayoutHocWrapper(props: any) {
     return (
-      <TestProvider>
-        <Test.Consumer>
+      <testProvider>
+        <test.Consumer>
           {() => <Component {...props} />}
-        </Test.Consumer>
-      </TestProvider>
+        </test.Consumer>
+      </testProvider>
     );
   };
 }
 
-export function useTest(): ContextType {
-  const context = useContext(Test);
+export function usetest(): ContextType {
+  const context = useContext(test);
   if (context === undefined) {
     throw new Error(
-      'useTest must be used within a TestProvider'
+      'usetest must be used within a testProvider'
     );
   }
   return context;

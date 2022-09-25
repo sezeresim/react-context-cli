@@ -1,7 +1,5 @@
 
-export const CONTEXT_NAME="CONTEXT_NAME"
-
-export const CONTEXT_FILE=`import React, {
+export const CONTEXT_FILE:string=`import React, {
   ComponentType,
   createContext,
   useContext,
@@ -59,12 +57,12 @@ export function useCONTEXT_NAME(): ContextType {
 }
 `
 
-export const ENUMS_FILE=`export enum ActionTypes {
+export const ENUMS_FILE:string=`export enum ActionTypes {
   EXAMPLE = 'EXAMPLE',
 }
 `
 
-export const REDUCER_FILE=`import { ActionTypes } from './CONTEXT_NAME.enums';
+export const REDUCER_FILE:string=`import { ActionTypes } from './CONTEXT_NAME.enums';
 import type { ReducerActionType, StateType } from './CONTEXT_NAME.types';
 
 export const initialState: StateType = {
@@ -90,7 +88,7 @@ export default function seachReducer(
 `
 
 
-export const TYPES_FILE=`import React from 'react';
+export const TYPES_FILE:string=`import React from 'react';
 
 import FetchStatusType from '@/types/FetchStatusType';
 
@@ -121,6 +119,5 @@ export type ReducerActionType =
     CONTEXT_FILE,
 ENUMS_FILE,
 REDUCER_FILE,
-TYPES_FILE,
-CONTEXT_NAME
+TYPES_FILE
   }

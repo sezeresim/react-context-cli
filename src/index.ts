@@ -4,19 +4,17 @@ import chalk from 'chalk';
 import inquirer from 'inquirer';
 import chalkAnimation from 'chalk-animation';
 import shell from 'shelljs';
-import files from './content';
-
+import files from "./files"
 let contextFileName="Test"
 let fileType="ts"
 
 
-const sleep = (ms = 500) => new Promise((r) => setTimeout(r, ms));
 
 async function welcome() {
   const rainbowTitle = chalkAnimation.rainbow(
     'Hello cli-context \n'
   );
-  await sleep();
+
   rainbowTitle.stop();
 }
 
@@ -59,10 +57,10 @@ function createFiles() {
     shell.rm('-rf',"examples");
     shell.mkdir("examples")
     shell.cd("examples")
-    shell.exec(`echo "${files.CONTEXT_FILE.replaceAll(files.CONTEXT_NAME,contextFileName)}" >  ${contextFileName}.context.${fileType}x`) 
+    shell.exec(`echo "${files.CONTEXT_FILE.replace(/CONTEXT_NAME/ig,contextFileName)}" >  ${contextFileName}.context.${fileType}x`) 
     shell.exec(`echo "${files.ENUMS_FILE}" >  ${contextFileName}.enums.${fileType}`) 
-    shell.exec(`echo "${files.TYPES_FILE.replaceAll(files.CONTEXT_NAME,contextFileName)}" >  ${contextFileName}.types.${fileType}`) 
-    shell.exec(`echo "${files.REDUCER_FILE.replaceAll(files.CONTEXT_NAME,contextFileName)}" >  ${contextFileName}.reducer.${fileType}x`) 
+    shell.exec(`echo "${files.TYPES_FILE.replace(/CONTEXT_NAME/ig,contextFileName)}" >  ${contextFileName}.types.${fileType}`) 
+    shell.exec(`echo "${files.REDUCER_FILE.replace(/CONTEXT_NAME/ig,contextFileName)}" >  ${contextFileName}.reducer.${fileType}x`) 
 }
 
 
@@ -70,8 +68,13 @@ function createFiles() {
 
 
 // Run it with top-level await
-console.clear();
+
+
+async function run() {
+  console.clear();
 await welcome();
 await initContextFileName();
 await getFileType();
 createFiles()
+}
+run()

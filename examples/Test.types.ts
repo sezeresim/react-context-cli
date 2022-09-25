@@ -2,7 +2,7 @@ import React from 'react';
 
 import FetchStatusType from '@/types/FetchStatusType';
 
-import { ActionTypes } from './Test.enums';
+import { ActionTypes } from './test.enums';
 
 export type ModalType =
 
