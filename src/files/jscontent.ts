@@ -43,12 +43,12 @@ export function useRCACLI() {
     }
     return context
 }
-`
+`;
 
 export const ENUMS_FILE: string = `export const ActionTypes = {
     EXAMPLE: 'EXAMPLE',
 }
-`
+`;
 
 export const REDUCER_FILE: string = `import { ActionTypes } from './RCACLI.enums'
 
@@ -70,10 +70,10 @@ export default function RCACLIReducer(state, action) {
     }
 }
 
-`
+`;
 
 export default {
-    CONTEXT_FILE,
-    ENUMS_FILE,
-    REDUCER_FILE,
-}
+  CONTEXT_FILE,
+  ENUMS_FILE,
+  REDUCER_FILE,
+};

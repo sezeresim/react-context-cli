@@ -54,12 +54,12 @@ export function useRCACLI(): ContextType {
   }
   return context;
 }
-`
+`;
 
 export const ENUMS_FILE: string = `export enum ActionTypes {
   EXAMPLE = 'EXAMPLE',
 }
-`
+`;
 
 export const REDUCER_FILE: string = `import { ActionTypes } from './RCACLI.enums';
 import type { ReducerActionType, StateType } from './RCACLI.types';
@@ -84,7 +84,7 @@ export default function RCACLIReducer(
       return state;
   }
 }
-`
+`;
 
 export const TYPES_FILE: string = `import React from 'react';
 
@@ -107,11 +107,11 @@ export type ReducerActionType =
         example: StateType['example'];
       };
     }
-  `
+  `;
 
 export default {
-    CONTEXT_FILE,
-    ENUMS_FILE,
-    REDUCER_FILE,
-    TYPES_FILE,
-}
+  CONTEXT_FILE,
+  ENUMS_FILE,
+  REDUCER_FILE,
+  TYPES_FILE,
+};
